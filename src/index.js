@@ -17,7 +17,7 @@ function refreshWeather(response) {
   timeElement.innerHTML = formatDate(date);
 
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}"
-					 class ="weather-icon"
+					 class ="weather-app-icon"
 					/>`;
 
   getForecast(response.data.city);
