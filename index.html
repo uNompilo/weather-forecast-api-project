@@ -1,59 +1,58 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="src/style.css" />
-		<script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
-		<title>weather-api-v2</title>
-	</head>
-	<body>
-		<div class="weather-app">
-			<header>
-				<form class="search form" id="search-form">
-					<input
-						type="search"
-						placeholder="Enter a city..."
-						required
-						id="search-form-input"
-						class="search-form-input"
-					/>
-					<input
-						type="submit"
-						value="search"
-						required
-						class="search-form-button"
-					/>
-				</form>
-			</header>
-			<main>
-				<div class="weather-app-data">
-					<div>
-						<h1 class="weather-app-city" id="city"></h1>
-						<p class="weather-app-details">
-							<span id="time">Tuesday 14:49</span>
-							<span id="description">scattered clouds</span>
-							<br />
-							Humidity: <strong id="humidity"></strong>, Wind:
-							<strong id="windSpeed"></strong>
-						</p>
-					</div>
-					<div class="weather-app-temperature-container">
-						<div id="icon"></div>
-						<div id="temperature" class="weather-app-temperature"></div>
-						<div id="unit" class="weather-app-unit">°C</div>
-					</div>
-				</div>
-			</main>
-			<footer>
-				This project was coded by
-				<a href="https://github.com/uNompilo">Nompilo Ngwane</a> and is
-				<a href="https://github.com/uNompilo/weather-api-v2"
-					>open-sourced on GitHub</a
-				>
-				and <a href="https://weather-api-v2.netlify.app/">hosted on Netlify</a>.
-			</footer>
-		</div>
-		<script src="src/index.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather Forecast API Project</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+            id="search-form-input"
+          />
+          <button type="submit" class="search-form-button">Search</button>
+        </form>
+      </header>
+
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city" id="city">🏙️ Loading...</h1>
+            <p class="weather-app-details">
+              <span id="time">Tuesday 14:49</span>,
+              <span id="description">scattered clouds</span>
+              <br />
+              Humidity: <strong id="humidity">0%</strong>, Wind:
+              <strong id="windSpeed">0 km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div id="icon" class="weather-icon"></div>
+            <div id="temperature" class="weather-app-temperature">0</div>
+            <div id="unit" class="weather-app-unit">°C</div>
+          </div>
+        </div>
+
+        <div class="weather-forecast" id="forecast"></div>
+      </main>
+
+      <footer>
+        This project was coded by
+        <a href="https://github.com/uNompilo">Nompilo Ngwane</a> and is
+        <a href="https://github.com/uNompilo/weather-api-v2"
+          >open-sourced on GitHub</a
+        >
+        and <a href="https://weather-api-v2.netlify.app/">hosted on Netlify</a>.
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
 </html>
